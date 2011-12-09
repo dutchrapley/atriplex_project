@@ -1,0 +1,73 @@
+<% title "Plants" %>
+
+<table>
+  <tr>
+    <th>Common Name</th>
+    <th>Genus</th>
+    <th>Species</th>
+    <th>Zone</th>
+    <th>Light</th>
+    <th>Moisture</th>
+    <th>Soil Texture</th>
+    <th>Soil Ph</th>
+    <th>Form</th>
+    <th>Height</th>
+    <th>Width</th>
+    <th>Root Span</th>
+    <th>Lifespan</th>
+    <th>Growth Rate</th>
+    <th>Native</th>
+    <th>Edible</th>
+    <th>Medicinal</th>
+    <th>Nitrogen Fixer</th>
+    <th>Ground Cover</th>
+    <th>Dynamic Accumulator</th>
+    <th>Nectary</th>
+    <th>Cover Crop</th>
+    <th>Seed Stock Sources</th>
+    <th>Local Examples</th>
+    <th>Sources</th>
+    <th>Notes</th>
+    <th>Insects</th>
+    <th>Animals</th>
+    <th>Flavor Profile</th>
+  </tr>
+  <% for plant in @plants %>
+    <tr>
+      <td><%= plant.common_name %></td>
+      <td><%= plant.genus %></td>
+      <td><%= plant.species %></td>
+      <td><%= plant.zone %></td>
+      <td><%= plant.light %></td>
+      <td><%= plant.moisture %></td>
+      <td><%= plant.soil_texture %></td>
+      <td><%= plant.soil_ph %></td>
+      <td><%= plant.form %></td>
+      <td><%= plant.height %></td>
+      <td><%= plant.width %></td>
+      <td><%= plant.root_span %></td>
+      <td><%= plant.lifespan %></td>
+      <td><%= plant.growth_rate %></td>
+      <td><%= plant.native %></td>
+      <td><%= plant.edible %></td>
+      <td><%= plant.medicinal %></td>
+      <td><%= plant.nitrogen_fixer %></td>
+      <td><%= plant.ground_cover %></td>
+      <td><%= plant.dynamic_accumulator %></td>
+      <td><%= plant.nectary %></td>
+      <td><%= plant.cover_crop %></td>
+      <td><%= plant.seed_stock_sources %></td>
+      <td><%= plant.local_examples %></td>
+      <td><%= plant.sources %></td>
+      <td><%= plant.notes %></td>
+      <td><%= plant.insects %></td>
+      <td><%= plant.animals %></td>
+      <td><%= plant.flavor_profile %></td>
+      <td><%= link_to "Show", plant %></td>
+      <td><%= link_to "Edit", edit_plant_path(plant) %></td>
+      <td><%= link_to "Destroy", plant, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Plant", new_plant_path %></p>

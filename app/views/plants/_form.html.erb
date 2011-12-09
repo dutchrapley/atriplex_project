@@ -1,0 +1,120 @@
+<%= form_for @plant do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :common_name %><br />
+    <%= f.text_field :common_name %>
+  </p>
+  <p>
+    <%= f.label :genus %><br />
+    <%= f.text_field :genus %>
+  </p>
+  <p>
+    <%= f.label :species %><br />
+    <%= f.text_field :species %>
+  </p>
+  <p>
+    <%= f.label :zone %><br />
+    <%= f.text_field :zone %>
+  </p>
+  <p>
+    <%= f.label :light %><br />
+    <%= f.text_field :light %>
+  </p>
+  <p>
+    <%= f.label :moisture %><br />
+    <%= f.text_field :moisture %>
+  </p>
+  <p>
+    <%= f.label :soil_texture %><br />
+    <%= f.text_field :soil_texture %>
+  </p>
+  <p>
+    <%= f.label :soil_ph %><br />
+    <%= f.text_field :soil_ph %>
+  </p>
+  <p>
+    <%= f.label :form %><br />
+    <%= f.text_field :form %>
+  </p>
+  <p>
+    <%= f.label :height %><br />
+    <%= f.text_field :height %>
+  </p>
+  <p>
+    <%= f.label :width %><br />
+    <%= f.text_field :width %>
+  </p>
+  <p>
+    <%= f.label :root_span %><br />
+    <%= f.text_field :root_span %>
+  </p>
+  <p>
+    <%= f.label :lifespan %><br />
+    <%= f.text_field :lifespan %>
+  </p>
+  <p>
+    <%= f.label :growth_rate %><br />
+    <%= f.text_field :growth_rate %>
+  </p>
+  <p>
+    <%= f.label :native %><br />
+    <%= f.text_field :native %>
+  </p>
+  <p>
+    <%= f.label :edible %><br />
+    <%= f.text_field :edible %>
+  </p>
+  <p>
+    <%= f.label :medicinal %><br />
+    <%= f.text_field :medicinal %>
+  </p>
+  <p>
+    <%= f.label :nitrogen_fixer %><br />
+    <%= f.text_field :nitrogen_fixer %>
+  </p>
+  <p>
+    <%= f.label :ground_cover %><br />
+    <%= f.text_field :ground_cover %>
+  </p>
+  <p>
+    <%= f.label :dynamic_accumulator %><br />
+    <%= f.text_field :dynamic_accumulator %>
+  </p>
+  <p>
+    <%= f.label :nectary %><br />
+    <%= f.text_field :nectary %>
+  </p>
+  <p>
+    <%= f.label :cover_crop %><br />
+    <%= f.text_field :cover_crop %>
+  </p>
+  <p>
+    <%= f.label :seed_stock_sources %><br />
+    <%= f.text_field :seed_stock_sources %>
+  </p>
+  <p>
+    <%= f.label :local_examples %><br />
+    <%= f.text_field :local_examples %>
+  </p>
+  <p>
+    <%= f.label :sources %><br />
+    <%= f.text_field :sources %>
+  </p>
+  <p>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
+  </p>
+  <p>
+    <%= f.label :insects %><br />
+    <%= f.text_field :insects %>
+  </p>
+  <p>
+    <%= f.label :animals %><br />
+    <%= f.text_field :animals %>
+  </p>
+  <p>
+    <%= f.label :flavor_profile %><br />
+    <%= f.text_field :flavor_profile %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
