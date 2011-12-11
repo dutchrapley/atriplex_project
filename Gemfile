@@ -15,6 +15,8 @@ gem 'thin'
 
 gem 'twitter-bootstrap-rails'
 
+gem 'newrelic_rpm'
+
 group :development do
   gem "nifty-generators"
 end
