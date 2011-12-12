@@ -1,4 +1,5 @@
-<% title "Plant" %>
+<% title "#{@plant.common_name}" %>
+<h1><%= @plant.common_name %></h1>
 
 <p>
   <strong>Common Name:</strong>
@@ -118,7 +119,9 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_plant_path(@plant) %> |
-  <%= link_to "Destroy", @plant, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", plants_path %>
+  <% if current_user %>
+    <%= link_to "Edit", edit_plant_path(@plant), :class => "btn primary" %> |
+    <%= link_to "Destroy", @plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %> |
+  <% end %>
+  <%= link_to "View All", plants_path, :class => "btn info" %>
 </p>

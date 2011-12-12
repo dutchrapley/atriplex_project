@@ -38,7 +38,7 @@
        %>
         <%= content_tag :div, msg, :class => "alert-message #{context}" %>
       <% end %>
-      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%#= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
     <%= javascript_include_tag 'application' %>
