@@ -1,37 +1,39 @@
 <% title "Plants" %>
 
-<table>
-  <tr>
-    <th>Common Name</th>
-    <th>Genus</th>
-    <th>Species</th>
-    <th>Zone</th>
-    <th>Light</th>
-    <th>Moisture</th>
-    <th>Soil Texture</th>
-    <th>Soil Ph</th>
-    <th>Form</th>
-    <th>Height</th>
-    <th>Width</th>
-    <th>Root Span</th>
-    <th>Lifespan</th>
-    <th>Growth Rate</th>
-    <th>Native</th>
-    <th>Edible</th>
-    <th>Medicinal</th>
-    <th>Nitrogen Fixer</th>
-    <th>Ground Cover</th>
-    <th>Dynamic Accumulator</th>
-    <th>Nectary</th>
-    <th>Cover Crop</th>
-    <th>Seed Stock Sources</th>
-    <th>Local Examples</th>
-    <th>Sources</th>
-    <th>Notes</th>
-    <th>Insects</th>
-    <th>Animals</th>
-    <th>Flavor Profile</th>
-  </tr>
+<table class="bordered-table zebra-striped">
+  <thead>
+    <tr>
+      <th>Common Name</th>
+      <th>Genus</th>
+      <th>Species</th>
+      <th>Zone</th>
+      <th>Light</th>
+      <th>Moisture</th>
+      <th>Soil Texture</th>
+      <th>Soil Ph</th>
+      <th>Form</th>
+      <th>Height</th>
+      <th>Width</th>
+      <th>Root Span</th>
+      <th>Lifespan</th>
+      <th>Growth Rate</th>
+      <th>Native</th>
+      <th>Edible</th>
+      <th>Medicinal</th>
+      <th>Nitrogen Fixer</th>
+      <th>Ground Cover</th>
+      <th>Dynamic Accumulator</th>
+      <th>Nectary</th>
+      <th>Cover Crop</th>
+      <th>Seed Stock Sources</th>
+      <th>Local Examples</th>
+      <th>Sources</th>
+      <th>Notes</th>
+      <th>Insects</th>
+      <th>Animals</th>
+      <th>Flavor Profile</th>
+    </tr>
+  </thead>
   <% for plant in @plants %>
     <tr>
       <td><%= plant.common_name %></td>
