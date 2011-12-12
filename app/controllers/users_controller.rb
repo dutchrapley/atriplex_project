@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
   
   before_filter :authenticate_user!
+  before_filter :require_admin
+  
+  # logger.debug is_admin?
   
   def index
     @users = User.all
+    logger.debug @users
   end
 
   def show
@@ -41,4 +45,5 @@ class UsersController < ApplicationController
     @user.destroy
     redirect_to users_url, :notice => "Successfully destroyed user."
   end
+  
 end
