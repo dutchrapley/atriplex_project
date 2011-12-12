@@ -59,5 +59,5 @@ AtriplexProject::Application.configure do
   config.active_support.deprecation = :notify
   
   # devise specific settings
-  onfig.action_mailer.default_url_options = { :host => 'atriplex.org' }
+  config.action_mailer.default_url_options = { :host => 'atriplex.org' }
 end
