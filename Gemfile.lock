@@ -32,7 +32,9 @@ GEM
     addressable (2.2.6)
     ansi (1.4.1)
     arel (2.2.1)
+    bcrypt-ruby (3.0.1)
     builder (3.0.0)
+    cancan (1.6.7)
     coffee-rails (3.1.1)
       coffee-script (>= 2.2.0)
       railties (~> 3.1.0)
@@ -43,6 +45,10 @@ GEM
     commonjs (0.2.0)
       therubyracer (~> 0.9.9)
     daemons (1.1.4)
+    devise (1.5.2)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.1)
     erubis (2.7.0)
     eventmachine (0.12.10)
     execjs (1.2.12)
@@ -81,6 +87,7 @@ GEM
     multi_json (1.0.4)
     newrelic_rpm (3.3.0)
     nifty-generators (0.4.6)
+    orm_adapter (0.0.5)
     pg (0.12.0)
       rake-compiler (~> 0.7)
     polyglot (0.3.3)
@@ -150,12 +157,16 @@ GEM
     uglifier (1.1.0)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    warden (1.1.0)
+      rack (>= 1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  cancan
   coffee-rails (~> 3.1.1)
+  devise
   heroku
   heroku_san
   jquery-rails

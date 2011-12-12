@@ -7,15 +7,22 @@ gem 'rails', '3.1.3'
 
 gem 'pg'
 
+# heroku gems
 gem 'heroku'
-
 gem 'heroku_san'
-
 gem 'thin'
 
+# twitter bootstrap
 gem 'twitter-bootstrap-rails'
 
+# new relic gem
 gem 'newrelic_rpm'
+
+# authentication gems
+gem 'devise'
+gem 'cancan'
+
+
 
 group :development do
   gem "nifty-generators"

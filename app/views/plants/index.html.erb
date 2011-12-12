@@ -63,11 +63,13 @@
       <td><%= plant.insects %></td>
       <td><%= plant.animals %></td>
       <td><%= plant.flavor_profile %></td>
-      <td><%= link_to "Show", plant %></td>
-      <td><%= link_to "Edit", edit_plant_path(plant) %></td>
-      <td><%= link_to "Destroy", plant, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% if current_user %>
+        <td><%= link_to "Show", plant %></td>
+        <td><%= link_to "Edit", edit_plant_path(plant) %></td>
+        <td><%= link_to "Destroy", plant, :confirm => 'Are you sure?', :method => :delete %></td>
+      <% end %>
     </tr>
   <% end %>
 </table>
 
-<p><%= link_to "New Plant", new_plant_path %></p>
+<p><%= link_to "New Plant", new_plant_path if current_user %></p>

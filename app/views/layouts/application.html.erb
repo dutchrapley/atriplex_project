@@ -3,17 +3,44 @@
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
     <%= stylesheet_link_tag "application" %>
-    <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
   <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container">
+          <a href="#" class="brand">The Atriplex Project</a>
+          <ul class="nav">
+            <% if current_user %>
+              <li class="current_user">Hello, <%= current_user.email %></li>
+              <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+              <li class="current_user"> | </li>
+              <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+            <% else %>
+              <li><%= link_to "Login", new_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div id="container">
       <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% if name == 'notice'
+           context = 'success'
+         elsif name == 'error'
+           context = 'error'
+         elsif name == 'success'
+           context = 'success'
+         else
+           context = 'success'
+         end
+       %>
+        <%= content_tag :div, msg, :class => "alert-message #{context}" %>
       <% end %>
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
+    <%= javascript_include_tag 'application' %>
   </body>
 </html>
