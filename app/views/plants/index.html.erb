@@ -32,6 +32,11 @@
       <th>Insects</th>
       <th>Animals</th>
       <th>Flavor Profile</th>
+      <th></th>
+      <% if current_user %>
+        <th></th>
+        <th></th>
+      <% end %>
     </tr>
   </thead>
   <% for plant in @plants %>
@@ -65,10 +70,10 @@
       <td><%= plant.insects %></td>
       <td><%= plant.animals %></td>
       <td><%= plant.flavor_profile %></td>
+      <td><%= link_to "More Info", plant, :class => "btn info" %></td>
       <% if current_user %>
-        <td><%= link_to "Show", plant %></td>
-        <td><%= link_to "Edit", edit_plant_path(plant) %></td>
-        <td><%= link_to "Destroy", plant, :confirm => 'Are you sure?', :method => :delete %></td>
+        <td><%= link_to "Edit", edit_plant_path(plant), :class => "btn primary" %></td>
+        <td><%= link_to "Destroy", plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %></td>
       <% end %>
     </tr>
   <% end %>
