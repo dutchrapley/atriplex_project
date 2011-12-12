@@ -120,8 +120,10 @@
 
 <p>
   <% if current_user %>
-    <%= link_to "Edit", edit_plant_path(@plant), :class => "btn primary" %> |
-    <%= link_to "Destroy", @plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %> |
+    <%= link_to "Edit", edit_plant_path(@plant), :class => "btn primary" %>&nbsp;
+    <% if current_user.admin? %>
+      <%= link_to "Destroy", @plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %>&nbsp;
+    <% end %>
   <% end %>
   <%= link_to "View All", plants_path, :class => "btn info" %>
 </p>

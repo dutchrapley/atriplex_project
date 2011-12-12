@@ -35,7 +35,9 @@
       <th></th>
       <% if current_user %>
         <th></th>
-        <th></th>
+        <% if current_user.admin? %>
+          <th></th>
+        <% end %>
       <% end %>
     </tr>
   </thead>
@@ -73,7 +75,9 @@
       <td><%= link_to "More Info", plant, :class => "btn info" %></td>
       <% if current_user %>
         <td><%= link_to "Edit", edit_plant_path(plant), :class => "btn primary" %></td>
-        <td><%= link_to "Destroy", plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %></td>
+        <% if current_user.admin? %>
+          <td><%= link_to "Destroy", plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
       <% end %>
     </tr>
   <% end %>
