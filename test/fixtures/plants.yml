@@ -1,61 +1,61 @@
 one:
-  common_name: MyString
-  genus: MyString
-  species: MyString
-  zone: MyString
-  light: MyString
-  moisture: MyString
-  soil_texture: MyString
-  soil_ph: MyString
-  form: MyString
-  height: MyString
-  width: MyString
-  root_span: MyString
-  lifespan: MyString
-  growth_rate: MyString
-  native: MyString
-  edible: MyString
-  medicinal: MyString
-  nitrogen_fixer: MyString
-  ground_cover: MyString
-  dynamic_accumulator: MyString
-  nectary: MyString
-  cover_crop: MyString
-  seed_stock_sources: MyString
-  local_examples: MyString
-  sources: MyString
-  notes: MyText
-  insects: MyString
-  animals: MyString
-  flavor_profile: MyString
+  common_name: "Amaranth"
+  genus: "Amaranthus"
+  species: Spp.
+  zone: 0
+  light: Full Sun
+  moisture: Drought Tolerant
+  soil_texture: well draining
+  soil_ph: 7.5
+  form: upright
+  height: up to 3 feet
+  width: 1/2in.
+  root_span: 2-3 feet
+  lifespan: 1 season
+  growth_rate: fast in spring
+  native: x
+  edible: "seeds, leaves" 
+  medicinal: leaves
+  nitrogen_fixer: no
+  ground_cover: yes
+  dynamic_accumulator: yes
+  nectary: when flowering
+  cover_crop: yes
+  seed_stock_sources: "UWG, BG, SoC"
+  local_examples: most backyards
+  sources: "PFAF, AFCM"
+  notes: "Hi protein. Drought-tolerant once established"
+  insects: mites
+  animals: deer
+  flavor_profile: nutty. pasta-like when cooked
 
 two:
-  common_name: MyString
-  genus: MyString
-  species: MyString
-  zone: MyString
-  light: MyString
-  moisture: MyString
-  soil_texture: MyString
-  soil_ph: MyString
-  form: MyString
-  height: MyString
-  width: MyString
-  root_span: MyString
-  lifespan: MyString
-  growth_rate: MyString
-  native: MyString
-  edible: MyString
-  medicinal: MyString
-  nitrogen_fixer: MyString
-  ground_cover: MyString
-  dynamic_accumulator: MyString
-  nectary: MyString
-  cover_crop: MyString
-  seed_stock_sources: MyString
-  local_examples: MyString
-  sources: MyString
-  notes: MyText
-  insects: MyString
-  animals: MyString
-  flavor_profile: MyString
+  common_name: "Serviceberry/Saskatoon 'Pigeon Berry' (Amelanchier alnifolia var. pumila)"
+  genus: Amelanchier
+  species: alnifolia
+  zone: 2 - 3
+  light: Some Shade
+  moisture: Moist
+  soil_texture: "S (L, C)"
+  soil_ph: 5.5-7
+  form: "Shrub, M"
+  height: 15'
+  width: 15'
+  root_span: 
+  lifespan: 15-30 yrs
+  growth_rate: 
+  native: x
+  edible: berry
+  medicinal: "For inflamation and pain when fruit ingested *http://www.ncbi.nlm.nih.gov/pubmed/15997850"
+  nitrogen_fixer: 
+  ground_cover: 
+  dynamic_accumulator: 
+  nectary: x
+  cover_crop: 
+  seed_stock_sources: "BNPN, OTC"
+  local_examples: 
+  sources: "PFAF, OTC"
+  notes: "Grows true to seed. Plants fruit in 2-3 years. Hardy to -40 F"
+  insects: 
+  animals: 
+  flavor_profile: 

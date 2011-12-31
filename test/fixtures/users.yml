@@ -1,9 +1,10 @@
-one:
-  name: MyString
-  email: MyString
-  password: 
+john:
+  name: Testguy1
+  email: testguy1@testemail.com
+  admin: true
+  confirmed_at: <%= 1.hour.ago.to_s(:db) %> 
 
 two:
   name: MyString
   email: MyString
-  password: 
+  confirmed_at: <%= 1.hour.ago.to_s(:db) %>
