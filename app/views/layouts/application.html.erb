@@ -11,6 +11,10 @@
       <div class="topbar-inner">
         <div class="container">
           <a href="<%= root_path %>" class="brand">The Atriplex Project</a>
+          <ul class="nav">
+            <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "New Plant", new_plant_path if current_user %></li>
+          </ul>
           <%= form_tag("/plants/search", :method => "get") do %>
             <%= text_field_tag :search, "", :class => "pull-left", :placeholder => "Search" %>
           <% end -%>
