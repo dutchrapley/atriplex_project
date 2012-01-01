@@ -22,7 +22,8 @@ gem 'newrelic_rpm'
 gem 'devise'
 gem 'cancan'
 
-
+# full text search
+gem 'texticle', '~> 2.0', :require => 'texticle/rails'
 
 group :development do
   gem "nifty-generators"

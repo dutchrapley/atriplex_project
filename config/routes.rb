@@ -3,7 +3,11 @@ AtriplexProject::Application.routes.draw do
 
   resources :users
 
-  resources :plants
+  resources :plants do
+    collection do
+      get 'search'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

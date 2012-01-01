@@ -1,10 +1,15 @@
 class PlantsController < ApplicationController
   
-  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authenticate_user!, :except => [:index, :show, :search]
   before_filter :require_admin, :only => :destroy
   
   def index
     @plants = Plant.all
+  end
+
+  def search
+    @plants = Plant.search params[:search]
+    render "index"
   end
 
   def show
