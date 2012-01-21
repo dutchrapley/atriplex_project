@@ -2,6 +2,7 @@ class PlantsController < ApplicationController
   
   before_filter :authenticate_user!, :except => [:index, :show, :search]
   before_filter :require_admin, :only => :destroy
+  before_filter :require_editor, :except => [:index, :show, :search]
   
   def index
     @plants = Plant.all

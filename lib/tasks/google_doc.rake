@@ -82,4 +82,11 @@ namespace :atriplex do
       end
     end
   end
+  task :import_google_doc => :environment do
+    @plants = Plants.all
+
+    @plants.each do |plant|
+      
+    end
+  end
 end

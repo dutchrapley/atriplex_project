@@ -37,6 +37,12 @@ class PlantsControllerTest < ActionController::TestCase
     assert_template 'edit'
   end
 
+  def test_user_is_editor
+    sign_in users(:non_editor)
+    get :edit, :id => Plant.first
+    assert_redirected_to new_user_session_path
+  end
+
   def test_update_invalid
     sign_in users(:john)
     Plant.any_instance.stubs(:valid?).returns(false)

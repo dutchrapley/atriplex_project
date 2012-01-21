@@ -5,8 +5,15 @@ class ApplicationController < ActionController::Base
 
     def require_admin
       unless is_admin?
-        flash[:error] = "Only admins can do that"
+        flash[:error] = "Only admins can do that."
         redirect_to root_path # halts request cycle
+      end
+    end
+
+    def require_editor
+      unless is_editor? || is_admin?
+        flash[:error] = "Only Editors can do that."
+        redirect_to new_user_session_path
       end
     end
 
@@ -17,6 +24,10 @@ class ApplicationController < ActionController::Base
     # really mean to convert something into true or false.
     def is_admin?
       !!current_user.admin
+    end
+
+    def is_editor?
+      !!current_user.editor
     end
     
 end

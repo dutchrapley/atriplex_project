@@ -4,7 +4,8 @@ john:
   admin: true
   confirmed_at: <%= 1.hour.ago.to_s(:db) %> 
 
-two:
-  name: MyString
-  email: MyString
+non_editor:
+  name: testguy2
+  email: test@guy.com
+  editor: false
   confirmed_at: <%= 1.hour.ago.to_s(:db) %>
