@@ -1,129 +1,137 @@
 <% title "#{@plant.common_name}" %>
-<h1><%= @plant.common_name %></h1>
+<div class="container" style="padding: 20px 0;">
+  <div style="float: right;">
+    <% @wiki_plant_images.each_with_index do |image, index| %>
+      <%= image_tag image, :style => "width: 250px;" %><br>
+      <% break if index == 2 %>
+    <% end -%>
+  </div>
+  <h1><%= @plant.common_name %></h1>
+  <p>
+    <strong>Common Name:</strong>
+    <%= @plant.common_name %>
+  </p>
+  <p>
+    <strong>Genus:</strong>
+    <%= @plant.genus %>
+  </p>
+  <p>
+    <strong>Species:</strong>
+    <%= @plant.species %>
+  </p>
+  <p>
+    <strong>Zone:</strong>
+    <%= @plant.zone %>
+  </p>
+  <p>
+    <strong>Light:</strong>
+    <%= @plant.light %>
+  </p>
+  <p>
+    <strong>Moisture:</strong>
+    <%= @plant.moisture %>
+  </p>
+  <p>
+    <strong>Soil Texture:</strong>
+    <%= @plant.soil_texture %>
+  </p>
+  <p>
+    <strong>Soil Ph:</strong>
+    <%= @plant.soil_ph %>
+  </p>
+  <p>
+    <strong>Form:</strong>
+    <%= @plant.form %>
+  </p>
+  <p>
+    <strong>Height:</strong>
+    <%= @plant.height %>
+  </p>
+  <p>
+    <strong>Width:</strong>
+    <%= @plant.width %>
+  </p>
+  <p>
+    <strong>Root Span:</strong>
+    <%= @plant.root_span %>
+  </p>
+  <p>
+    <strong>Lifespan:</strong>
+    <%= @plant.lifespan %>
+  </p>
+  <p>
+    <strong>Growth Rate:</strong>
+    <%= @plant.growth_rate %>
+  </p>
+  <p>
+    <strong>Native:</strong>
+    <%= @plant.native %>
+  </p>
+  <p>
+    <strong>Edible:</strong>
+    <%= @plant.edible %>
+  </p>
+  <p>
+    <strong>Medicinal:</strong>
+    <%= @plant.medicinal %>
+  </p>
+  <p>
+    <strong>Nitrogen Fixer:</strong>
+    <%= @plant.nitrogen_fixer %>
+  </p>
+  <p>
+    <strong>Ground Cover:</strong>
+    <%= @plant.ground_cover %>
+  </p>
+  <p>
+    <strong>Dynamic Accumulator:</strong>
+    <%= @plant.dynamic_accumulator %>
+  </p>
+  <p>
+    <strong>Nectary:</strong>
+    <%= @plant.nectary %>
+  </p>
+  <p>
+    <strong>Cover Crop:</strong>
+    <%= @plant.cover_crop %>
+  </p>
+  <p>
+    <strong>Seed Stock Sources:</strong>
+    <%= @plant.seed_stock_sources %>
+  </p>
+  <p>
+    <strong>Local Examples:</strong>
+    <%= @plant.local_examples %>
+  </p>
+  <p>
+    <strong>Sources:</strong>
+    <%= @plant.sources %>
+  </p>
+  <p>
+    <strong>Notes:</strong>
+    <%= @plant.notes %>
+  </p>
+  <p>
+    <strong>Insects:</strong>
+    <%= @plant.insects %>
+  </p>
+  <p>
+    <strong>Animals:</strong>
+    <%= @plant.animals %>
+  </p>
+  <p>
+    <strong>Flavor Profile:</strong>
+    <%= @plant.flavor_profile %>
+  </p>
 
-<p>
-  <strong>Common Name:</strong>
-  <%= @plant.common_name %>
-</p>
-<p>
-  <strong>Genus:</strong>
-  <%= @plant.genus %>
-</p>
-<p>
-  <strong>Species:</strong>
-  <%= @plant.species %>
-</p>
-<p>
-  <strong>Zone:</strong>
-  <%= @plant.zone %>
-</p>
-<p>
-  <strong>Light:</strong>
-  <%= @plant.light %>
-</p>
-<p>
-  <strong>Moisture:</strong>
-  <%= @plant.moisture %>
-</p>
-<p>
-  <strong>Soil Texture:</strong>
-  <%= @plant.soil_texture %>
-</p>
-<p>
-  <strong>Soil Ph:</strong>
-  <%= @plant.soil_ph %>
-</p>
-<p>
-  <strong>Form:</strong>
-  <%= @plant.form %>
-</p>
-<p>
-  <strong>Height:</strong>
-  <%= @plant.height %>
-</p>
-<p>
-  <strong>Width:</strong>
-  <%= @plant.width %>
-</p>
-<p>
-  <strong>Root Span:</strong>
-  <%= @plant.root_span %>
-</p>
-<p>
-  <strong>Lifespan:</strong>
-  <%= @plant.lifespan %>
-</p>
-<p>
-  <strong>Growth Rate:</strong>
-  <%= @plant.growth_rate %>
-</p>
-<p>
-  <strong>Native:</strong>
-  <%= @plant.native %>
-</p>
-<p>
-  <strong>Edible:</strong>
-  <%= @plant.edible %>
-</p>
-<p>
-  <strong>Medicinal:</strong>
-  <%= @plant.medicinal %>
-</p>
-<p>
-  <strong>Nitrogen Fixer:</strong>
-  <%= @plant.nitrogen_fixer %>
-</p>
-<p>
-  <strong>Ground Cover:</strong>
-  <%= @plant.ground_cover %>
-</p>
-<p>
-  <strong>Dynamic Accumulator:</strong>
-  <%= @plant.dynamic_accumulator %>
-</p>
-<p>
-  <strong>Nectary:</strong>
-  <%= @plant.nectary %>
-</p>
-<p>
-  <strong>Cover Crop:</strong>
-  <%= @plant.cover_crop %>
-</p>
-<p>
-  <strong>Seed Stock Sources:</strong>
-  <%= @plant.seed_stock_sources %>
-</p>
-<p>
-  <strong>Local Examples:</strong>
-  <%= @plant.local_examples %>
-</p>
-<p>
-  <strong>Sources:</strong>
-  <%= @plant.sources %>
-</p>
-<p>
-  <strong>Notes:</strong>
-  <%= @plant.notes %>
-</p>
-<p>
-  <strong>Insects:</strong>
-  <%= @plant.insects %>
-</p>
-<p>
-  <strong>Animals:</strong>
-  <%= @plant.animals %>
-</p>
-<p>
-  <strong>Flavor Profile:</strong>
-  <%= @plant.flavor_profile %>
-</p>
-
-<p>
-  <% if current_user %>
-    <%= link_to "Edit", edit_plant_path(@plant), :class => "btn primary" %>&nbsp;
-    <% if current_user.admin? %>
-      <%= link_to "Destroy", @plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %>&nbsp;
+  <p>
+    <% if current_user %>
+      <%= link_to "Edit", edit_plant_path(@plant), :class => "btn primary" %>&nbsp;
+      <% if current_user.admin? %>
+        <%= link_to "Destroy", @plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %>&nbsp;
+      <% end %>
     <% end %>
-  <% end %>
-  <%= link_to "View All", plants_path, :class => "btn info" %>
-</p>
+    <%= link_to "View All", plants_path, :class => "btn info" %>
+  </p>
+</div><!-- / -->
+

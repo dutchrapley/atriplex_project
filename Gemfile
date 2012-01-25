@@ -25,6 +25,11 @@ gem 'cancan'
 # full text search
 gem 'texticle', '~> 2.0', :require => 'texticle/rails'
 
+#talk to api's
+gem 'wrest'
+
+gem 'awesome_print'
+
 group :development do
   gem "nifty-generators"
 end
