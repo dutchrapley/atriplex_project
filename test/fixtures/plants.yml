@@ -1,6 +1,6 @@
 one:
-  common_name: "Amaranth"
-  genus: "Amaranthus"
+  common_name: Amaranth
+  genus: Amaranthus
   species: Spp.
   zone: 0
   light: Full Sun
@@ -30,9 +30,9 @@ one:
   flavor_profile: nutty. pasta-like when cooked
 
 two:
-  common_name: "Serviceberry/Saskatoon 'Pigeon Berry' (Amelanchier alnifolia var. pumila)"
-  genus: Amelanchier
-  species: alnifolia
+  common_name:
+  genus:
+  species:
   zone: 2 - 3
   light: Some Shade
   moisture: Moist
@@ -59,3 +59,34 @@ two:
   insects: 
   animals: 
   flavor_profile: 
+
+three:
+  common_name: Amaranth three
+  genus: Amaranthus
+  species: Spp.
+  zone: 0
+  light: Full Sun
+  moisture: Drought Tolerant
+  soil_texture: well draining
+  soil_ph: 7.5
+  form: upright
+  height: up to 3 feet
+  width: 1/2in.
+  root_span: 2-3 feet
+  lifespan: 1 season
+  growth_rate: fast in spring
+  native: x
+  edible: "seeds, leaves" 
+  medicinal: leaves
+  nitrogen_fixer: no
+  ground_cover: yes
+  dynamic_accumulator: yes
+  nectary: when flowering
+  cover_crop: yes
+  seed_stock_sources: "UWG, BG, SoC"
+  local_examples: most backyards
+  sources: "PFAF, AFCM"
+  notes: "Hi protein. Drought-tolerant once established"
+  insects: mites
+  animals: deer
+  flavor_profile: nutty. pasta-like when cooked
