@@ -1,0 +1,52 @@
+<table id="plants_table" class="bordered-table zebra-striped">
+  <thead>
+    <tr>
+      <th>Common Name</th>
+      <th>Genus</th>
+      <th>Species</th>
+      <th>Zone</th>
+      <th>Light</th>
+      <th>Moisture</th>
+      <th>Soil Texture</th>
+      <th>Soil Ph</th>
+      
+      <th>Native</th>
+      <th>Edible</th>
+      <th>Medicinal</th>
+      <th>Nitrogen Fixer</th>
+      
+      <th></th>
+      <% if current_user %>
+        <th></th>
+        <% if current_user.admin? %>
+          <th></th>
+        <% end %>
+      <% end %>
+    </tr>
+  </thead>
+  <% for plant in @plants %>
+    <tr>
+      <td><%= plant.common_name %></td>
+      <td><%= plant.genus %></td>
+      <td><%= plant.species %></td>
+      <td><%= plant.zone %></td>
+      <td><%= plant.light %></td>
+      <td><%= plant.moisture %></td>
+      <td><%= plant.soil_texture %></td>
+      <td><%= plant.soil_ph %></td>
+      
+      <td><%= plant.native %></td>
+      <td><%= plant.edible %></td>
+      <td><%= plant.medicinal %></td>
+      <td><%= plant.nitrogen_fixer %></td>
+      
+      <td><%= link_to "More Info", plant, :class => "btn info" %></td>
+      <% if current_user %>
+        <td><%= link_to "Edit", edit_plant_path(plant), :class => "btn primary" %></td>
+        <% if current_user.admin? %>
+          <td><%= link_to "Destroy", plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
+      <% end %>
+    </tr>
+  <% end %>
+</table>

@@ -1,17 +1,20 @@
 class PlantsController < ApplicationController
-  
+
   before_filter :authenticate_user!, :except => [:index, :show, :search]
   before_filter :require_admin, :only => :destroy
   before_filter :require_editor, :except => [:index, :show, :search]
   before_filter :find_plant, :except => [:index, :search, :new, :create]
-  
+  before_filter :search_array
   def index
-    @plants = Plant.all
+    @plants = Plant.all    
+    if params[:table_index]
+      render "old_index"
+    end
   end
 
   def search
     @plants = Plant.search params[:search]
-    render "index"
+    render "old_index"
   end
 
   def show
@@ -50,6 +53,15 @@ class PlantsController < ApplicationController
   private
   def find_plant
     @plant = Plant.find(params[:id])
+  end
+
+  def search_array
+    @plants = Plant.all
+    @search_array = []
+    @plants.each do |plant|
+      @search_array << plant.common_name unless plant.common_name == nil
+      @search_array << "#{plant.genus} #{plant.species}"
+    end
   end
 
   def first_wiki_image

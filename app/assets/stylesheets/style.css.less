@@ -1,3 +1,26 @@
+/* Vars
+----------------------------------------------*/
+@title_blue: #0071bc;
+
+/* Styles
+----------------------------------------------*/ 
+a {
+   outline: 0;
+}
+body {
+  font-family: "Trebuchet MS";
+  background: #f4f9e8;
+  padding-bottom: 50px;
+}
+h1 {
+  color: @title_blue;
+}
+.blue {
+  color: @title_blue;
+}
+.left {
+  float: left;
+}
 #container {
 	padding-top: 40px;
 }
@@ -6,4 +29,37 @@
 }
 .btn.info {
 	text-align: center;
+}
+.topbar-inner, .topbar .fill {
+  background: #c69c6d;
+  opacity: 0.8;
+}
+.header_image {
+  background: url("header_image.png");
+  height: 265px;
+}
+.row {
+  width: 1240px;
+  margin: 0 auto;
+  // border: 1px solid red
+}
+.span10 {
+  padding: 0 20px;
+  margin: 0 auto !important;
+  // border: 1px solid green;
+}
+
+.home_icons {
+  height: 140px;
+  &:hover {
+    color: green;
+    background: #e4f9e9;
+    cursor: pointer;
+  }
+}
+ul.nav a {
+color: #FFFFFF;
+}
+a .home_icons {
+  color: black;
 }

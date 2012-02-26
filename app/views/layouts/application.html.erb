@@ -13,6 +13,9 @@
           <a href="<%= root_path %>" class="brand">The Atriplex Project</a>
           <ul class="nav">
             <li><%= link_to "Home", root_path %></li>
+            <li><%= link_to "Learn", root_path %></li>
+            <li><%= link_to "Browse", "/plants?table_index=true" %></li>
+            <li><%= link_to "Contribute", new_user_registration_path %></li>
             <li><%= link_to "New Plant", new_plant_path if current_user %></li>
           </ul>
           <%= form_tag("/plants/search", :method => "get") do %>
@@ -33,6 +36,9 @@
         </div>
       </div>
     </div>
+    <div id="container" class="header_image">
+      <%= image_tag "atriplex_logo.png" %>
+    </div><!-- /container -->
     <div id="container">
       <% flash.each do |name, msg| %>
       <% 
@@ -50,5 +56,11 @@
       <%= yield %>
     </div>
     <%= javascript_include_tag 'application' %>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        options = {source: <%= raw(@search_array) %>}
+        $('input#search').typeahead(options);
+      })
+    </script>
   </body>
 </html>

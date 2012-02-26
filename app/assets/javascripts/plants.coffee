@@ -1,1 +1,1 @@
-$("#plants_table").tablesorter( {sortList: [[0,0]]} );
+$("#plants_table").tablesorter( {sortList: [[0,0]]} )

@@ -1,54 +1,54 @@
 <% title "Plants" %>
 
-<table id="plants_table" class="bordered-table zebra-striped">
-  <thead>
-    <tr>
-      <th>Common Name</th>
-      <th>Genus</th>
-      <th>Species</th>
-      <th>Zone</th>
-      <th>Light</th>
-      <th>Moisture</th>
-      <th>Soil Texture</th>
-      <th>Soil Ph</th>
-      
-      <th>Native</th>
-      <th>Edible</th>
-      <th>Medicinal</th>
-      <th>Nitrogen Fixer</th>
-      
-      <th></th>
-      <% if current_user %>
-        <th></th>
-        <% if current_user.admin? %>
-          <th></th>
-        <% end %>
-      <% end %>
-    </tr>
-  </thead>
-  <% for plant in @plants %>
-    <tr>
-      <td><%= plant.common_name %></td>
-      <td><%= plant.genus %></td>
-      <td><%= plant.species %></td>
-      <td><%= plant.zone %></td>
-      <td><%= plant.light %></td>
-      <td><%= plant.moisture %></td>
-      <td><%= plant.soil_texture %></td>
-      <td><%= plant.soil_ph %></td>
-      
-      <td><%= plant.native %></td>
-      <td><%= plant.edible %></td>
-      <td><%= plant.medicinal %></td>
-      <td><%= plant.nitrogen_fixer %></td>
-      
-      <td><%= link_to "More Info", plant, :class => "btn info" %></td>
-      <% if current_user %>
-        <td><%= link_to "Edit", edit_plant_path(plant), :class => "btn primary" %></td>
-        <% if current_user.admin? %>
-          <td><%= link_to "Destroy", plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %></td>
-        <% end %>
-      <% end %>
-    </tr>
-  <% end %>
-</table>
+<div class="row">
+  <div class="span10">
+    <h1>About Atriplex</h1>
+    <p>
+      Atriplex.org is an open-source website that helps facilitate the research and design of permaculture landscapes in Colorado.  Centered around an user-editable database of plants appropriate for Colorado’s ecology, Atriplex is designed to help you learn more about edible landscape design and how to incorporate it into your site.
+    </p><br>
+    <h1>Featured Species</h1>
+    <%= image_tag "sea_buckthorn.png" %>
+    <p>
+      <span class="blue">Sea Buckthorn</span> <i>(Hippophae rhamnoides)</i><br>
+      Perennial nitrogen-fixing shrub with edible berries.
+    </p>
+  </div><!-- /span10 -->
+  <div id="home_links" class="span10">
+      <h1>Get Started</h1>
+      <%= link_to root_path do %>
+        <div id="learn" class="home_icons">
+          <%= image_tag "learn.png", :align => 'middle', :class => 'left' %>
+          <div class="left" style="margin-left: 20px;">
+            <span class="blue">LEARN</span> about permaculture,<br>
+            guild design and more
+          </div>
+        </div>
+      <% end -%>
+      <%= link_to "/plants?table_index=true" do %>
+        <div id="browse" class="home_icons">
+          <%= image_tag "browse.png", :align => 'middle', :class => 'left' %>
+          <div class="left" style="margin-left: 47px;">
+            <span class="blue">BROWSE</span> the plant listings by name,<br>
+            size function and more
+          </div>
+        </div>
+      <% end -%>
+        <div id="search" class="home_icons">
+          <%= image_tag "search.png", :align => 'middle', :class => 'left' %>
+          <div class="left" style="margin-left: 47px;">
+            <span class="blue">SEARCH</span> Atriplex for species that are<br>
+            appropriate for your site
+          </div>
+        </div>
+      <%= link_to new_user_registration_path do %>
+        <div id="contribute" class="home_icons">
+          <%= image_tag "contribute.png", :align => 'middle', :class => 'left' %>
+          <div class="left" style="margin-left: 30px;">
+            <span class="blue">CONTRIBUTE</span> your species information,<br>
+            pictures, plant sources and more to the<br>
+            Atriplex database
+          </div>
+        </div>
+      <% end -%>
+  </div><!-- /span10 -->
+</div><!-- /row -->
