@@ -6,5 +6,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require_tree .
+//= require lib/bootstrap.js
+// require lib/jquery.tablesorter.min.js
+//= require lib/json2.js
+//= require lib/underscore-min.js
+//= require lib/backbone-min.js
+// require application.coffee
+//= require views/search.coffee
+//= require views/plant.coffee
+//= require models/plant.coffee
+//= require collections/plants_collection.coffee

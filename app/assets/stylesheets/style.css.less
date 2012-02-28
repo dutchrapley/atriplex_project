@@ -11,6 +11,7 @@ body {
   font-family: "Trebuchet MS";
   background: #f4f9e8;
   padding-bottom: 50px;
+  min-height: 1600px;
 }
 h1 {
   color: @title_blue;
@@ -30,7 +31,7 @@ h1 {
 .btn.info {
 	text-align: center;
 }
-.topbar-inner, .topbar .fill {
+.navbar-inner, .navbar .fill {
   background: #c69c6d;
   opacity: 0.8;
 }
@@ -44,6 +45,7 @@ h1 {
   // border: 1px solid red
 }
 .span10 {
+  width: 580px;
   padding: 0 20px;
   margin: 0 auto !important;
   // border: 1px solid green;
@@ -57,9 +59,20 @@ h1 {
     cursor: pointer;
   }
 }
-ul.nav a {
-color: #FFFFFF;
+.navbar .nav a {
+  font-size: 15px;
+  color: #FFFFFF !important;
+  &:hover {
+    color: green !important;
+  }
 }
 a .home_icons {
   color: black;
+}
+#plantTableHead {
+  height: 40px;
+}
+#searchContainer {
+  position: relative;
+  top: 5px;
 }

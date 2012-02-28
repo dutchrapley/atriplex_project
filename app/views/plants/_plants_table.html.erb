@@ -1,0 +1,39 @@
+<div id="plantTableHead">
+  
+</div>
+<table id="plants_table" class="table table-bordered table-striped">
+  <thead >
+    <tr>
+      <th>Common Name</th>
+      <th>Genus</th>
+      <th>Species</th>
+      <th>Zone</th>
+      <th>Light</th>
+      <th>Moisture</th>
+      <th>Soil Texture</th>
+      <th>Soil Ph</th>
+      
+      <th>Native</th>
+      <th>Edible</th>
+      <th>Medicinal</th>
+      <th>Nitrogen Fixer</th>
+      
+      <th></th>
+      <% if current_user %>
+        <th></th>
+        <% if current_user.admin? %>
+          <th></th>
+        <% end %>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody id="plantIndex">
+    
+  </tbody>  
+</table>
+<% content_for :custom_js do %>
+  <script type="text/javascript" charset="utf-8">
+    var plants = new Plants();
+    plants.reset(<%= raw(@plants.to_json) %>);
+  </script>
+<% end -%>

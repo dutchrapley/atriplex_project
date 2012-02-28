@@ -15,7 +15,6 @@
   </div><!-- /span10 -->
   <div id="home_links" class="span10">
       <h1>Get Started</h1>
-      <%= link_to root_path do %>
         <div id="learn" class="home_icons">
           <%= image_tag "learn.png", :align => 'middle', :class => 'left' %>
           <div class="left" style="margin-left: 20px;">
@@ -23,8 +22,6 @@
             guild design and more
           </div>
         </div>
-      <% end -%>
-      <%= link_to "/plants?table_index=true" do %>
         <div id="browse" class="home_icons">
           <%= image_tag "browse.png", :align => 'middle', :class => 'left' %>
           <div class="left" style="margin-left: 47px;">
@@ -32,7 +29,6 @@
             size function and more
           </div>
         </div>
-      <% end -%>
         <div id="search" class="home_icons">
           <%= image_tag "search.png", :align => 'middle', :class => 'left' %>
           <div class="left" style="margin-left: 47px;">
@@ -52,3 +48,4 @@
       <% end -%>
   </div><!-- /span10 -->
 </div><!-- /row -->
+<%= render "plants_table" %>

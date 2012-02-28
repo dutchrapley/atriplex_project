@@ -5,16 +5,16 @@ class PlantsController < ApplicationController
   before_filter :require_editor, :except => [:index, :show, :search]
   before_filter :find_plant, :except => [:index, :search, :new, :create]
   before_filter :search_array
+  respond_to :html, :json
+
   def index
     @plants = Plant.all    
-    if params[:table_index]
-      render "old_index"
-    end
+    respond_with(@plants)
   end
 
   def search
     @plants = Plant.search params[:search]
-    render "old_index"
+    respond_with(@plants)
   end
 
   def show

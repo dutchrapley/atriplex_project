@@ -30,6 +30,8 @@ gem 'wrest'
 
 gem 'awesome_print'
 
+#gem 'backbone-rails'
+
 group :development do
   gem "nifty-generators"
 end

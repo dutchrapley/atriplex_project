@@ -7,10 +7,10 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div class="topbar">
-      <div class="topbar-inner">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
         <div class="container">
-          <a href="<%= root_path %>" class="brand">The Atriplex Project</a>
+          <%= link_to "The Atriplex Project", root_path, :class => 'brand' %>
           <ul class="nav">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Learn", root_path %></li>
@@ -18,9 +18,7 @@
             <li><%= link_to "Contribute", new_user_registration_path %></li>
             <li><%= link_to "New Plant", new_plant_path if current_user %></li>
           </ul>
-          <%= form_tag("/plants/search", :method => "get") do %>
-            <%= text_field_tag :search, "", :class => "pull-left", :placeholder => "Search" %>
-          <% end -%>
+          <div id="searchContainer"></div>
           <ul class="nav secondary-nav">
             <% if current_user %>
               <li class="current_user">Hello, <%= current_user.email %></li>
@@ -52,15 +50,9 @@
       %>
         <%= content_tag :div, msg, :class => "alert-message #{context}" %>
       <% end %>
-      <%#= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
     </div>
     <%= javascript_include_tag 'application' %>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        options = {source: <%= raw(@search_array) %>}
-        $('input#search').typeahead(options);
-      })
-    </script>
+    <%= yield :custom_js %>
   </body>
 </html>
