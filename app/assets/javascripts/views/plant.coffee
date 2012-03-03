@@ -11,8 +11,8 @@ plantTemplate = _.template("
   <td><%= edible %></td>
   <td><%= medicinal %></td>
   <td><%= nitrogen_fixer %></td>
-  <td><a href='/plant/<%= id %>' class='btn btn-info'>more info</a></td>
-  <td><a href='/plant/<%= id %>/edit' class='btn btn-primary'>edit<a></td>
+  <td><a href='/plants/<%= id %>' class='btn btn-info'>more info</a></td>
+  <td><a href='/plants/<%= id %>/edit' class='btn btn-primary'>edit<a></td>
 ")
 
 window.PlantView = Backbone.View.extend(
