@@ -34,6 +34,7 @@ gem 'awesome_print'
 
 group :development do
   gem "nifty-generators"
+  gem 'railroady'
 end
 
 

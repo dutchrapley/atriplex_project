@@ -50,24 +50,10 @@ class PlantsController < ApplicationController
     redirect_to plants_url, :notice => "Successfully destroyed plant."
   end
 
-  private
-  def find_plant
-    @plant = Plant.find(params[:id])
-  end
-
-  def search_array
-    @plants = Plant.all
-    @search_array = []
-    @plants.each do |plant|
-      @search_array << plant.common_name unless plant.common_name == nil
-      @search_array << "#{plant.genus} #{plant.species}"
-    end
-  end
-
   def first_wiki_image
-    genus = @plant.genus ? @plant.genus : ""
-    species = @plant.species ? @plant.species : ""
-    common_name = @plant.common_name ? @plant.common_name : ""
+    genus = params[:genus] ? params[:genus] : ""
+    species = params[:species] ? params[:species] : ""
+    common_name = params[:common_name] ? params[:common_name] : ""
     scientific_url = "http://en.wikipedia.org/w/api.php?format=json&action=query&titles=#{CGI.escape genus}%20#{CGI.escape species.downcase}&prop=imageinfo&iiprop=url&generator=images"
     common_url = "http://en.wikipedia.org/w/api.php?format=json&action=query&titles=#{CGI.escape common_name}&prop=imageinfo&iiprop=url&generator=images"
     @scientific_plant_images = scientific_url.to_uri.get.deserialise
@@ -104,6 +90,22 @@ class PlantsController < ApplicationController
         end
       end
     end
-
   end
+
+  private
+  def find_plant
+    @plant = Plant.find(params[:id])
+  end
+
+  def search_array
+    @plants = Plant.all
+    @search_array = []
+    @plants.each do |plant|
+      @search_array << plant.common_name unless plant.common_name == nil
+      @search_array << "#{plant.genus} #{plant.species}"
+    end
+  end
+
+  
+
 end

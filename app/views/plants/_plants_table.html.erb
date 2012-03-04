@@ -18,7 +18,6 @@
       <th>Medicinal</th>
       <th>Nitrogen Fixer</th>
       
-      <th></th>
       <% if current_user %>
         <th></th>
         <% if current_user.admin? %>
@@ -36,4 +35,10 @@
     var plants = new Plants();
     plants.reset(<%= raw(@plants.to_json) %>);
   </script>
+
+  <% if current_user.blank? %>
+    <style type="text/css" media="all">
+      .edit-plant{display: none;}
+    </style>
+  <% end -%>
 <% end -%>
