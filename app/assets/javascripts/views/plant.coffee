@@ -72,6 +72,6 @@ window.PlantView = Backbone.View.extend(
   toggleMore: ->
     console.log @model.get('id')
     clicked = @model.get('id')
-    $("#more_#{clicked}").slideToggle()
+    $("#more_#{clicked}").toggle()
 )
 
