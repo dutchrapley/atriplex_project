@@ -17,3 +17,4 @@
 # Ignore a bunch of stuff I don't want to see getting in the repo
 .DS_Store
 .rvmrc
+*.svg
