@@ -43,7 +43,7 @@ moreInfoTemplate = _.template("
       <u>Insects</u><br /><%= insects %><hr>
       <u>Animals</u><br /><%= animals %>
     </td>
-    <td></td>
+    <td id='images_<%= id %>' colspan='3'></td>
   </tr>
 ")
 
@@ -56,7 +56,7 @@ window.PlantView = Backbone.View.extend(
     'click': 'toggleMore'
 
   initialize: ->
-    _.bindAll this
+    _.bindAll this, "toggleMore", "grabImages"
 
   render: () ->
     $(@el).attr('id', @model.get('id'))
@@ -73,5 +73,21 @@ window.PlantView = Backbone.View.extend(
     console.log @model.get('id')
     clicked = @model.get('id')
     $("#more_#{clicked}").toggle()
+    @grabImages()
+
+  grabImages: ->
+    that = this
+    worker = new Worker("wiki_worker.js")
+
+    worker.onmessage = (event) ->
+      $("#images_#{that.model.get('id')}").html("")
+
+      console.log event.data, that.model.get('id')
+
+      for image in event.data
+        imgSrc = "<img src=#{image}>"
+        $("#images_#{that.model.get('id')}").append(imgSrc)
+
+    worker.postMessage("#{@model.get('common_name')}")
 )
 
