@@ -14,38 +14,38 @@
     </p>
   </div><!-- /span10 -->
   <div id="home_links" class="span10">
-      <h1>Get Started</h1>
-        <div id="learn" class="home_icons">
-          <%= image_tag "learn.png", :align => 'middle', :class => 'left' %>
-          <div class="left" style="margin-left: 20px;">
-            <span class="blue">LEARN</span> about permaculture,<br>
-            guild design and more
-          </div>
+    <h1>Get Started</h1>
+    <div id="learn" class="home_icons">
+      <%= image_tag "learn.png", :align => 'middle', :class => 'left' %>
+      <div class="left" style="margin-left: 20px;">
+        <span class="blue">LEARN</span> about permaculture,<br>
+        guild design and more
+      </div>
+    </div>
+    <div id="browse" class="home_icons">
+      <%= image_tag "browse.png", :align => 'middle', :class => 'left' %>
+      <div class="left" style="margin-left: 47px;">
+        <span class="blue">BROWSE</span> the plant listings by name,<br>
+        size function and more
+      </div>
+    </div>
+    <div id="search" class="home_icons">
+      <%= image_tag "search.png", :align => 'middle', :class => 'left' %>
+      <div class="left" style="margin-left: 47px;">
+        <span class="blue">SEARCH</span> Atriplex for species that are<br>
+        appropriate for your site
+      </div>
+    </div>
+    <%= link_to new_user_registration_path do %>
+      <div id="contribute" class="home_icons">
+        <%= image_tag "contribute.png", :align => 'middle', :class => 'left' %>
+        <div class="left" style="margin-left: 30px;">
+          <span class="blue">CONTRIBUTE</span> your species information,<br>
+          pictures, plant sources and more to the<br>
+          Atriplex database
         </div>
-        <div id="browse" class="home_icons">
-          <%= image_tag "browse.png", :align => 'middle', :class => 'left' %>
-          <div class="left" style="margin-left: 47px;">
-            <span class="blue">BROWSE</span> the plant listings by name,<br>
-            size function and more
-          </div>
-        </div>
-        <div id="search" class="home_icons">
-          <%= image_tag "search.png", :align => 'middle', :class => 'left' %>
-          <div class="left" style="margin-left: 47px;">
-            <span class="blue">SEARCH</span> Atriplex for species that are<br>
-            appropriate for your site
-          </div>
-        </div>
-      <%= link_to new_user_registration_path do %>
-        <div id="contribute" class="home_icons">
-          <%= image_tag "contribute.png", :align => 'middle', :class => 'left' %>
-          <div class="left" style="margin-left: 30px;">
-            <span class="blue">CONTRIBUTE</span> your species information,<br>
-            pictures, plant sources and more to the<br>
-            Atriplex database
-          </div>
-        </div>
-      <% end -%>
+      </div>
+    <% end -%>
   </div><!-- /span10 -->
 </div><!-- /row -->
 <%= render "plants_table" %>

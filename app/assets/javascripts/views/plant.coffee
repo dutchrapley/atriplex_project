@@ -54,6 +54,7 @@ window.PlantView = Backbone.View.extend(
 
   events: ->
     'click': 'toggleMore'
+    'click #plant_rog': 'toggleMore'
 
   initialize: ->
     _.bindAll this, "toggleMore", "grabImages"
@@ -72,8 +73,11 @@ window.PlantView = Backbone.View.extend(
   toggleMore: ->
     console.log @model.get('id')
     clicked = @model.get('id')
-    $("#more_#{clicked}").toggle()
+    $("##{clicked}").toggleClass('open')
     @grabImages()
+    $("#more_#{clicked}")
+      .toggle()
+      .toggleClass('open')
 
   grabImages: ->
     that = this

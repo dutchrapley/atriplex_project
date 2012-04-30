@@ -14,7 +14,8 @@ function handleRequest(objJSON) {
     for (var k in results) {
       if (results.hasOwnProperty(k)) {
         url = results[k].imageinfo[0].url;
-        found = url.match(wiki_search_term);
+        re = new RegExp(wiki_search_term, "i")
+        found = url.match(re);
         if (found) {
           imgUrls.push(url);
         }
