@@ -7,7 +7,7 @@ primaryPlantTemplate = _.template("
   <td><%= moisture %></td>
   <td><%= soil_texture %></td>
   <td><%= soil_ph %></td>
-  <td><%= native %></td>
+  <td><%if (native == 't' || native == true){ %>X<%}else{} %></td>
   <td><%= edible %></td>
   <td><%= medicinal %></td>
   <td><%= nitrogen_fixer %></td>
