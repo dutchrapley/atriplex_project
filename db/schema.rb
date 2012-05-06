@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120506221234) do
+ActiveRecord::Schema.define(:version => 20120506223709) do
 
   create_table "plants", :force => true do |t|
     t.string   "common_name"
@@ -28,14 +28,7 @@ ActiveRecord::Schema.define(:version => 20120506221234) do
     t.string   "root_span"
     t.string   "lifespan"
     t.string   "growth_rate"
-    t.string   "native"
     t.string   "edible"
-    t.string   "medicinal"
-    t.string   "nitrogen_fixer"
-    t.string   "ground_cover"
-    t.string   "dynamic_accumulator"
-    t.string   "nectary"
-    t.string   "cover_crop"
     t.string   "seed_stock_sources"
     t.string   "local_examples"
     t.string   "sources"
@@ -45,13 +38,13 @@ ActiveRecord::Schema.define(:version => 20120506221234) do
     t.string   "flavor_profile"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "ncover_crop",          :default => false
-    t.boolean  "nnectary",             :default => false
-    t.boolean  "ndynamic_accumulator", :default => false
-    t.boolean  "nground_cover",        :default => false
-    t.boolean  "nnitrogen_fixer",      :default => false
-    t.boolean  "nmedicinal",           :default => false
-    t.boolean  "nnative",              :default => false
+    t.boolean  "cover_crop",          :default => false
+    t.boolean  "nectary",             :default => false
+    t.boolean  "dynamic_accumulator", :default => false
+    t.boolean  "ground_cover",        :default => false
+    t.boolean  "nitrogen_fixer",      :default => false
+    t.boolean  "medicinal",           :default => false
+    t.boolean  "native",              :default => false
   end
 
   create_table "users", :force => true do |t|
