@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120112030906) do
+ActiveRecord::Schema.define(:version => 20120506221234) do
 
   create_table "plants", :force => true do |t|
     t.string   "common_name"
@@ -45,6 +45,13 @@ ActiveRecord::Schema.define(:version => 20120112030906) do
     t.string   "flavor_profile"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "ncover_crop",          :default => false
+    t.boolean  "nnectary",             :default => false
+    t.boolean  "ndynamic_accumulator", :default => false
+    t.boolean  "nground_cover",        :default => false
+    t.boolean  "nnitrogen_fixer",      :default => false
+    t.boolean  "nmedicinal",           :default => false
+    t.boolean  "nnative",              :default => false
   end
 
   create_table "users", :force => true do |t|
