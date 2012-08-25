@@ -36,8 +36,8 @@ ActiveRecord::Schema.define(:version => 20120506223709) do
     t.string   "insects"
     t.string   "animals"
     t.string   "flavor_profile"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                             :null => false
+    t.datetime "updated_at",                             :null => false
     t.boolean  "cover_crop",          :default => false
     t.boolean  "nectary",             :default => false
     t.boolean  "dynamic_accumulator", :default => false
@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20120506223709) do
   create_table "users", :force => true do |t|
     t.string   "login"
     t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
     t.string   "email",                                 :default => "",    :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "",    :null => false
     t.string   "reset_password_token"
