@@ -29,7 +29,6 @@
               <li><%= link_to "New Plant", new_plant_path if current_user %></li>
             </ul>
           </div>
-          <div id="searchContainer"></div>
           <ul class="nav secondary-nav">
             <% if current_user %>
               <li class="current_user">Hello, <%= current_user.email %></li>
