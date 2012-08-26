@@ -22,7 +22,7 @@ window.Search = Backbone.View.extend(
       $('#plantIndex').empty()
       query = $('input#search').val()
       plants.fetch(data: "search=" + query)
-      document.getElementById('plantTableHead').scrollIntoView(true);
+      # document.getElementById('plantTableHead').scrollIntoView(true);
 
 )
 search = new Search()
