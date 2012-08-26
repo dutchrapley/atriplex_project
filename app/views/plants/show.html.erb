@@ -1,6 +1,7 @@
 <% title "#{@plant.common_name}" %>
-<div class="container" style="padding: 20px 0;">
-  <div style="float: left; margin: 4px;">
+<div class="container" style="padding: 20px 4px;">
+  <%= link_to "Back", :back, :class => "btn info" %>
+  <div style="float: left;">
       
     <h1><%= @plant.common_name %></h1>
     <p>
@@ -134,7 +135,6 @@
         <%= link_to "Destroy", @plant, :class => "btn danger", :confirm => 'Are you sure?', :method => :delete %>&nbsp;
       <% end %>
     <% end %>
-    <%= link_to "View All", :back, :class => "btn info" %>
   </p>
 </div><!-- / -->
 
