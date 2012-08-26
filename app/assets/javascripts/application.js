@@ -6,6 +6,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require functional.coffee
 //= require lib/bootstrap.js
 // require lib/jquery.tablesorter.min.js
 //= require lib/json2.js

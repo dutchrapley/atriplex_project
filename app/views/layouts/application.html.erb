@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name = "viewport" content = "initial-scale = 1.0">
     <title><%= content_for?(:title) ? yield(:title) : "The Atriplex Project" %></title>
     <%= stylesheet_link_tag "application" %>
     <%= csrf_meta_tag %>
@@ -14,10 +15,20 @@
           <ul class="nav">
             <li><%= link_to "Home", root_path %></li>
             <li><%= link_to "Learn", root_path %></li>
-            <li><%= link_to "Browse", "/plants?table_index=true" %></li>
+            <li><%= link_to "Browse", browse_plants_path %></li>
             <li><%= link_to "Contribute", new_user_registration_path %></li>
             <li><%= link_to "New Plant", new_plant_path if current_user %></li>
           </ul>
+          <div id='nav_button'>
+            Nav
+            <ul id='small_screen_nav'>
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Learn", root_path %></li>
+              <li><%= link_to "Browse", browse_plants_path %></li>
+              <li><%= link_to "Contribute", new_user_registration_path %></li>
+              <li><%= link_to "New Plant", new_plant_path if current_user %></li>
+            </ul>
+          </div>
           <div id="searchContainer"></div>
           <ul class="nav secondary-nav">
             <% if current_user %>

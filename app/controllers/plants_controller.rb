@@ -1,9 +1,9 @@
 class PlantsController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:index, :show, :search]
+  before_filter :authenticate_user!, :except => [:index, :show, :search, :browse]
   before_filter :require_admin, :only => :destroy
-  before_filter :require_editor, :except => [:index, :show, :search]
-  before_filter :find_plant, :except => [:index, :search, :new, :create]
+  before_filter :require_editor, :except => [:index, :show, :search, :browse]
+  before_filter :find_plant, :except => [:index, :search, :new, :create, :browse]
   before_filter :search_array
   respond_to :html, :json
 
@@ -14,6 +14,11 @@ class PlantsController < ApplicationController
 
   def search
     @plants = Plant.search params[:search]
+    respond_with(@plants)
+  end
+
+  def browse
+    @plants = Plant.all
     respond_with(@plants)
   end
 

@@ -23,13 +23,13 @@ h1 {
   float: left;
 }
 #container {
-	padding-top: 40px;
+  padding-top: 40px;
 }
 .current_user {
-	margin-top: 10px;
+  margin-top: 10px;
 }
 .btn.info {
-	text-align: center;
+  text-align: center;
 }
 .navbar-inner, .navbar .fill {
   background: #c69c6d;
@@ -38,7 +38,7 @@ h1 {
 }
 .navbar {
   .container {
-    min-width: 1200px;
+    // min-width: 1200px;
   }
   
 }
@@ -97,4 +97,56 @@ tr.open > td {
 }
 tr.plant_row.open > td {
   background-color: #5AB2BA !important;
+}
+#nav_button {
+  display: none;
+}
+#small_screen_nav, #small_navigation {
+  display: none;
+}
+/* smartphone screens
+----------------------------------------------*/
+@media all
+and (min-width: 320px) 
+and (max-width: 480px) {
+  input[type='text'],textarea {
+    font-size:16px;
+  }
+  .navbar .container {
+    min-width: auto !important;
+  }
+  .header_image {
+    height: 50%;
+  }
+  .row {
+    width: auto;
+  }
+  #search {
+    width: 100px !important;
+  }
+  .brand {
+    font-size: 12px !important;
+  }
+  .nav {
+    display: none !important;
+  }
+  #nav_button {
+    display: block;
+    float: right;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin: 6px 4px 0 0;
+    padding: 3px;
+    background-color: #d79a2a;
+    cursor: pointer;
+  }
+  #small_screen_nav {
+    position: absolute;
+    right: 0;
+    background: #d79a2a;
+    border: 1px solid black;
+    list-style: none;
+    margin-top: 5px;
+    padding: 2px;
+  }
 }

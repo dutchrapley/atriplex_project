@@ -6,6 +6,7 @@ AtriplexProject::Application.routes.draw do
   resources :plants do
     collection do
       get 'search'
+      get 'browse'
     end
   end
 

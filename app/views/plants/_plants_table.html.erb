@@ -1,5 +1,4 @@
 <div id="plantTableHead">
-  
 </div>
 <table id="plants_table" class="table table-bordered table-striped">
   <thead >
@@ -7,17 +6,6 @@
       <th>Common Name</th>
       <th>Genus</th>
       <th>Species</th>
-      <th>Zone</th>
-      <th>Light</th>
-      <th>Moisture</th>
-      <th>Soil Texture</th>
-      <th>Soil Ph</th>
-      
-      <th>Native</th>
-      <th>Edible</th>
-      <th>Medicinal</th>
-      <th>Nitrogen Fixer</th>
-      
       <% if current_user %>
         <th></th>
         <% if current_user.admin? %>
@@ -27,7 +15,13 @@
     </tr>
   </thead>
   <tbody id="plantIndex">
-    
+  <% @plants.each do |plant| %>
+    <tr>
+      <td><%= plant.common_name %></td>
+      <td><%= plant.genus %></td>
+      <td><%= plant.species %></td>
+    </tr>
+  <% end %>
   </tbody>  
 </table>
 <% content_for :custom_js do %>
