@@ -56,8 +56,8 @@ window.PlantView = Backbone.View.extend(
     moreInfo = moreInfoTemplate(@model.toJSON())
     $(primaryRow).appendTo(@el)
     $(@el).appendTo(table)
-    $(@el).tooltip({title: 'click to expand/collapse more info'})
-    $(moreInfo).appendTo(table)
+    # $(@el).tooltip({title: 'click to expand/collapse more info'})
+    # $(moreInfo).appendTo(table)
     this
 
   show: ->
