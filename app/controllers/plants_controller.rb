@@ -23,7 +23,6 @@ class PlantsController < ApplicationController
   end
 
   def show
-    first_wiki_image
   end
 
   def new
