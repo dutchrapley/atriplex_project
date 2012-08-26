@@ -1,5 +1,5 @@
 searchField = _.template("
-  <input id='search' class='pull-left' type='text' value='' placeholder='Search' name='search'>
+  <input id='search' class='pull-left' type=search results=5 value='' placeholder='Search' name='search'>
 ")
 
 window.Search = Backbone.View.extend(
@@ -23,6 +23,9 @@ window.Search = Backbone.View.extend(
       query = $('input#search').val()
       plants.fetch(data: "search=" + query)
       # document.getElementById('plantTableHead').scrollIntoView(true);
+    else
+      $('#plantIndex').empty()
+      plants.fetch(data: "")
 
 )
 search = new Search()
