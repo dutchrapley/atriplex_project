@@ -78,32 +78,32 @@ def first_wiki_image
     @scientific_plant_images = scientific_url.to_uri.get.deserialise
     @common_plant_images = common_url.to_uri.get.deserialise
 
-    logger.ap "=========================================================================================="
-    logger.ap @scientific_plant_images
-    logger.ap @common_plant_images
-    logger.ap scientific_url
-    logger.ap common_url
-    logger.ap common_name
-    logger.ap "=========================================================================================="
+    # logger.ap "=========================================================================================="
+    # logger.ap @scientific_plant_images
+    # logger.ap @common_plant_images
+    # logger.ap scientific_url
+    # logger.ap common_url
+    # logger.ap common_name
+    # logger.ap "=========================================================================================="
     @wiki_plant_images = []
     if @scientific_plant_images.length > 0
       name = common_name.gsub(/\s+/, "").downcase.titleize
-      logger.ap name
-      logger.ap "----------------------------"
+      # logger.ap name
+      # logger.ap "----------------------------"
       @scientific_plant_images["query"]["pages"].each do |image|
-        logger.ap image[1]["imageinfo"][0]["url"]
+        # logger.ap image[1]["imageinfo"][0]["url"]
         if image[1]["imageinfo"][0]["url"].include?(genus) && (image[1]["imageinfo"][0]["url"].include?(species.downcase) || image[1]["imageinfo"][0]["url"].include?(species.downcase)) || image[1]["imageinfo"][0]["url"].include?(name)
           @wiki_plant_images.push(image[1]["imageinfo"][0]["url"])
         end
       end
     end
-    logger.ap @common_plant_images.length
+    # logger.ap @common_plant_images.length
     if @common_plant_images.length > 0
       name = common_name.gsub(/\s+/, "")
-      logger.ap name
-      logger.ap "****************************"
+      # logger.ap name
+      # logger.ap "****************************"
       @common_plant_images["query"]["pages"].each do |image|
-        logger.ap image[1]["imageinfo"][0]["url"]
+        # logger.ap image[1]["imageinfo"][0]["url"]
         if image[1]["imageinfo"][0]["url"].include?(genus) && (image[1]["imageinfo"][0]["url"].include?(species) || image[1]["imageinfo"][0]["url"].include?(species.downcase)) || image[1]["imageinfo"][0]["url"].include?(name)
           @wiki_plant_images.push(image[1]["imageinfo"][0]["url"])
         end
