@@ -13,7 +13,11 @@ class PlantsController < ApplicationController
   end
 
   def search
-    @plants = Plant.search params[:search]
+    if params[:search].blank?
+      @plants = Plant.all
+    else
+      @plants = Plant.search params[:search]
+    end
     respond_with(@plants)
   end
 
