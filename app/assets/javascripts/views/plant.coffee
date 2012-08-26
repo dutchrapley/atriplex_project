@@ -1,7 +1,6 @@
 primaryPlantTemplate = _.template("
   <td><%= common_name %></td>
-  <td><%= genus %></td>
-  <td><%= species %></td>
+  <td><%= genus %> <%= species %></td>
   <td class='edit-plant'><a href='/plants/<%= id %>/edit' class='btn btn-primary'>edit<a></td>
 ")
 
