@@ -43,8 +43,8 @@ window.PlantView = Backbone.View.extend(
   className: 'plant_row'
 
   events: ->
-    'click': 'toggleMore'
-    'click #plant_rog': 'toggleMore'
+    'click': 'show' # 'toggleMore'
+    'click #plant_rog': 'show' #'toggleMore'
 
   initialize: ->
     _.bindAll this, "toggleMore", "grabImages"
@@ -59,6 +59,9 @@ window.PlantView = Backbone.View.extend(
     $(@el).tooltip({title: 'click to expand/collapse more info'})
     $(moreInfo).appendTo(table)
     this
+
+  show: ->
+    window.location.href = "/show/#{@model.get('id')}"
 
   toggleMore: ->
     console.log @model.get('id')
