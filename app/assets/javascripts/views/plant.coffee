@@ -2,15 +2,6 @@ primaryPlantTemplate = _.template("
   <td><%= common_name %></td>
   <td><%= genus %></td>
   <td><%= species %></td>
-  <td><%= zone %></td>
-  <td><%= light %></td>
-  <td><%= moisture %></td>
-  <td><%= soil_texture %></td>
-  <td><%= soil_ph %></td>
-  <td><%if (native == 't' || native == true){ %>X<%}else{} %></td>
-  <td><%= edible %></td>
-  <td><%if (medicinal == 't' || medicinal == true){ %>X<%}else{} %></td>
-  <td><%if (nitrogen_fixer == 't' || nitrogen_fixer == true){ %>X<%}else{} %></td>
   <td class='edit-plant'><a href='/plants/<%= id %>/edit' class='btn btn-primary'>edit<a></td>
 ")
 

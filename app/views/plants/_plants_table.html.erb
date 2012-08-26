@@ -1,4 +1,5 @@
 <div id="plantTableHead">
+  
 </div>
 <table id="plants_table" class="table table-bordered table-striped">
   <thead >
@@ -15,13 +16,6 @@
     </tr>
   </thead>
   <tbody id="plantIndex">
-  <% @plants.each do |plant| %>
-    <tr>
-      <td><%= plant.common_name %></td>
-      <td><%= plant.genus %></td>
-      <td><%= plant.species %></td>
-    </tr>
-  <% end %>
   </tbody>  
 </table>
 <% content_for :custom_js do %>
