@@ -61,7 +61,7 @@ window.PlantView = Backbone.View.extend(
     this
 
   show: ->
-    window.location.href = "/plants/#{@model.get('id')}"
+    window.location.href = "/plant/#{@model.get('id')}"
 
   toggleMore: ->
     console.log @model.get('id')
