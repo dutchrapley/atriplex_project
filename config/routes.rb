@@ -7,6 +7,7 @@ AtriplexProject::Application.routes.draw do
     collection do
       get 'search'
       get 'browse'
+      get 'learn'
     end
   end
 

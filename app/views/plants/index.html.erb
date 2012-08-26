@@ -15,27 +15,33 @@
   </div><!-- /span10 -->
   <div id="home_links" class="span10">
     <h1>Get Started</h1>
-    <div id="learn" class="home_icons">
-      <%= image_tag "learn.png", :align => 'middle', :class => 'left' %>
-      <div class="left" style="margin-left: 20px;">
-        <span class="blue">LEARN</span> about permaculture,<br>
-        guild design and more
+    <%= link_to learn_plants_path do %>
+      <div id="learn" class="home_icons">
+        <%= image_tag "learn.png", :align => 'middle', :class => 'left' %>
+        <div class="left" style="margin-left: 20px;">
+          <span class="blue">LEARN</span> about permaculture,<br>
+          guild design and more
+        </div>
       </div>
-    </div>
-    <div id="browse" class="home_icons">
-      <%= image_tag "browse.png", :align => 'middle', :class => 'left' %>
-      <div class="left" style="margin-left: 47px;">
-        <span class="blue">BROWSE</span> the plant listings by name,<br>
-        size function and more
+    <% end %>
+    <%= link_to browse_plants_path do %>
+      <div id="browse" class="home_icons">
+        <%= image_tag "browse.png", :align => 'middle', :class => 'left' %>
+        <div class="left" style="margin-left: 47px;">
+          <span class="blue">BROWSE</span> the plant listings by name,<br>
+          size function and more
+        </div>
       </div>
-    </div>
-    <div id="search" class="home_icons">
-      <%= image_tag "search.png", :align => 'middle', :class => 'left' %>
-      <div class="left" style="margin-left: 47px;">
-        <span class="blue">SEARCH</span> Atriplex for species that are<br>
-        appropriate for your site
+    <% end %>
+    <%= link_to browse_plants_path do %>
+      <div id="search" class="home_icons">
+        <%= image_tag "search.png", :align => 'middle', :class => 'left' %>
+        <div class="left" style="margin-left: 47px;">
+          <span class="blue">SEARCH</span> Atriplex for species that are<br>
+          appropriate for your site
+        </div>
       </div>
-    </div>
+    <% end %>
     <%= link_to new_user_registration_path do %>
       <div id="contribute" class="home_icons">
         <%= image_tag "contribute.png", :align => 'middle', :class => 'left' %>

@@ -1,9 +1,9 @@
 class PlantsController < ApplicationController
 
-  before_filter :authenticate_user!, :except => [:index, :show, :search, :browse]
+  before_filter :authenticate_user!, :except => [:index, :show, :search, :browse, :learn]
   before_filter :require_admin, :only => :destroy
-  before_filter :require_editor, :except => [:index, :show, :search, :browse]
-  before_filter :find_plant, :except => [:index, :search, :new, :create, :browse]
+  before_filter :require_editor, :except => [:index, :show, :search, :browse, :learn]
+  before_filter :find_plant, :except => [:index, :search, :new, :create, :browse, :learn]
   before_filter :search_array
   respond_to :html, :json
 

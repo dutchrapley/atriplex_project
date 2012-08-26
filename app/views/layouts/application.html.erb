@@ -14,7 +14,7 @@
           <%= link_to "The Atriplex Project", root_path, :class => 'brand' %>
           <ul class="nav">
             <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Learn", root_path %></li>
+            <li><%= link_to "Learn", learn_plants_path %></li>
             <li><%= link_to "Browse", browse_plants_path %></li>
             <li><%= link_to "Contribute", new_user_registration_path %></li>
             <li><%= link_to "New Plant", new_plant_path if current_user %></li>
@@ -23,7 +23,7 @@
             Nav
             <ul id='small_screen_nav'>
               <li><%= link_to "Home", root_path %></li>
-              <li><%= link_to "Learn", root_path %></li>
+              <li><%= link_to "Learn", learn_plants_path %></li>
               <li><%= link_to "Browse", browse_plants_path %></li>
               <li><%= link_to "Contribute", new_user_registration_path %></li>
               <li><%= link_to "New Plant", new_plant_path if current_user %></li>
